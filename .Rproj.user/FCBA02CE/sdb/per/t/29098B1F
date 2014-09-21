@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\nshinyUI(pageWithSidebar(\n    headerPanel(\"Example plot\"),\n    sidebarPanel(\n        sliderInput('mu', 'Guess at the mean',value = 70, min = 62, max = 74, step = 0.05,),\n        sliderInput('bequests_count', 'Total Bequests', value = 15, min = 3, max = 25, step = 1,),\n        sliderInput('total_bequest_amounts', 'Bequests Received', value=15, min=5,max=100, step=0.5,)\n\n    ),\n    mainPanel(\n        h3(\"Your Results\"),\n        plotOutput('newHist')\n        \n    )\n))\n# shinyUI(\n#     pageWithSidebar(\n#         # Application title\n#         headerPanel(\"Diabetes prediction\"),\n#         sidebarPanel(\n#             numericInput('glucose', 'Glucose mg/dl', 90, min = 50, max = 200, step = 5),\n#             submitButton('Submit')\n#         ),\n#         mainPanel(\n#             h3('Results of prediction'),\n#             h4('You entered'),\n#             verbatimTextOutput(\"inputValue\"),\n#             h4('Which resulted in a prediction of '),\n#             verbatimTextOutput(\"prediction\")\n#         )\n#     )\n# )",
+    "created" : 1407338042102.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "778023947",
+    "id" : "29098B1F",
+    "lastKnownWriteTime" : 1407339101,
+    "path" : "~/Desktop/data_science/data_products/project/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

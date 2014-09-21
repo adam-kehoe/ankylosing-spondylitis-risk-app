@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\n\n# diabetesRisk <- function(glucose) glucose / 200\n# shinyServer(\n#     function(input, output) {\n#         output$inputValue <- renderPrint({input$glucose})\n#         output$prediction <- renderPrint({diabetesRisk(input$glucose)})\n#     }\n# )\n\nlibrary(UsingR)\ndata(galton)\nshinyServer(\n    function(input, output) {\n        output$newHist <- renderPlot({\n            hist(galton$child, xlab='child height', col='lightblue',main='Histogram')\n            mu <- input$mu\n            lines(c(mu, mu), c(0, 200),col=\"red\",lwd=5)\n            mse <- mean((galton$child - mu)^2)\n            text(63, 150, paste(\"mu = \", mu))\n            text(63, 140, paste(\"MSE = \", round(mse, 2)))\n        })\n    }\n)",
+    "created" : 1407338098275.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3361077266",
+    "id" : "F7C3795E",
+    "lastKnownWriteTime" : 1407338967,
+    "path" : "~/Desktop/data_science/data_products/project/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
